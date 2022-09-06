@@ -1,6 +1,6 @@
 import './App.css';
-import AuthorContainer from './AuthorContainer';
-import PoemForm from './PoemForm';
+import AuthorContainer from './components/Authors';
+import PoemForm from './components/AddPoem';
 
 function App() {
   return(
