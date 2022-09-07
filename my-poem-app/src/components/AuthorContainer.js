@@ -1,10 +1,11 @@
 import React from "react"
 
 function AuthorContainer({poems}){
-    const{category, data}=poems
+    const{author,content,imageUrl,title, id}=poems
     return(
         <div>
-            <h6>BY - {data.author}</h6>
+            <h6>BY - {poems.author}</h6>
+            <button>more info</button>
         </div>
     )
 }
