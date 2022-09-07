@@ -18,7 +18,10 @@ function NavBar(){
                          <Link to="/authors" className="nav-link">AUTHORS</Link>
                      </li>
                      <li>
-                         <Link to="/addpoem" className="nav-link">ADD POEM</Link>
+                         <Link to="/addpoem" className="nav-link">ADD-POEM</Link>
+                     </li>
+                     <li>
+                         <Link to="/contactUs" className="nav-link">CONTACT-US</Link>
                      </li>
                  </ul>
             </div>

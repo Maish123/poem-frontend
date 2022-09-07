@@ -7,7 +7,11 @@ function App() {
     <div>
       <NavBar/>
       <Switch>
-        <Route></Route>
+        <Route exact path="/"><Home/></Route>
+        <Route exact path="/categories"><Categories/></Route>
+        <Route exact path="/authors"><Authors/></Route>
+        <Route exact path="/addpoem"><AddPoem/></Route>
+        <Route exact path="/contactus"><ContactUs/></Route>
       </Switch>
     </div>
   )
