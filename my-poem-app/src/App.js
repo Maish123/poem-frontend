@@ -1,5 +1,10 @@
 import './App.css';
 import NavBar from './components/NavBar';
+import Home from './components/Home';
+import Categories from './components/Categories';
+import Authors from './components/Authors';
+import AddPoem from './components/AddPoem';
+import ContactUs from './components/ContactUs';
 import { Route, Switch } from 'react-router-dom';
 
 function App() {

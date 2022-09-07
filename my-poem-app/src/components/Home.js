@@ -20,8 +20,6 @@ function Home(){
         </p>
         </div>
         <div className="box-2">
-        <AuthorContainer/>
-        <PoemForm/>
         <p>#html to generate a paragraph of dummy text. Control 
           how much text is generated with a number suffix, 
           such as lorem10 to generate 10 words of dummy text
