@@ -29,7 +29,7 @@ function App() {
         <Route exact path="/categories"><Categories/></Route>
         <Route exact path="/authors"><Authors/></Route>
         <Route exact path="/addpoem"><AddPoem/></Route>
-        <Route exact path="/contactus"><Poems poems ={poems}/></Route>
+        <Route exact path="/contactus"><Poems poemItems ={poems}/></Route>
       </Switch>
     </div>
   )
