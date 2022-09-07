@@ -14,13 +14,6 @@ function Poems({poemItems}){
         })}
         </div>
         <div className="box-2">
-          {poemItems.map((poemItem)=>{
-            return(
-              <PoemDetail
-              key={poemItem.id}
-              poems={poemItem}/>
-            )
-          })}
         </div>
       </div>
     )
