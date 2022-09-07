@@ -4,10 +4,23 @@ import Home from './components/Home';
 import Categories from './components/Categories';
 import Authors from './components/Authors';
 import AddPoem from './components/AddPoem';
-import ContactUs from './components/Poems';
+import Poems from './components/Poems';
 import { Route, Switch } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const[poems, setPoems] = useState([]) //state for the poem data
+
+  useEffect(()=>{
+    fetch("https://inshorts.deta.dev/news?category=science")
+    .then((resp)=>resp.json())
+    .then((respObj)=>{
+      console.log(respObj)
+      setPoems(respObj)
+    })
+  },[])
+
   return(
     <div>
       <NavBar/>
@@ -16,7 +29,7 @@ function App() {
         <Route exact path="/categories"><Categories/></Route>
         <Route exact path="/authors"><Authors/></Route>
         <Route exact path="/addpoem"><AddPoem/></Route>
-        <Route exact path="/contactus"><ContactUs/></Route>
+        <Route exact path="/contactus"><Poems poems ={poems}/></Route>
       </Switch>
     </div>
   )
