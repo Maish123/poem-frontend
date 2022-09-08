@@ -1,7 +1,17 @@
-function Authors(){
+import React from "react";
+import AuthorCard from "./AuthorCard";
+
+function Authors({poemItems}){
+    console.log(poemItems)
     return(
-        <div>
-            <p><b>You are the best Authors to ever exist</b></p>
+        <div className="container-2">
+                {poemItems.map((poemItem)=>{
+                    return(
+                        <AuthorCard
+                        key={poemItem.id}
+                        poems={poemItem}/>
+                    )
+                })}
         </div>
     )
 }

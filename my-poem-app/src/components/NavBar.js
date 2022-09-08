@@ -16,7 +16,7 @@ function NavBar(){
                          <Link to="/contactUs" className="nav-link">POEMS</Link>
                      </li>
                      <li>
-                         <Link to="/categories" className="nav-link">CATEGORIES</Link>
+                         <Link to="/popular" className="nav-link">POPULAR</Link>
                      </li>
                      <li>
                          <Link to="/authors" className="nav-link">AUTHORS</Link>

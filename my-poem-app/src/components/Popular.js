@@ -1,4 +1,4 @@
-function Categories(){
+function Popular(){
     return (
         <div>
             <h1>Here we will have our categories section</h1>
@@ -6,4 +6,4 @@ function Categories(){
     )
 }
 
-export default Categories;
+export default Popular;

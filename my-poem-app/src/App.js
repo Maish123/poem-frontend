@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
-import Categories from './components/Categories';
+import Popular from './components/Popular';
 import Authors from './components/Authors';
 import AddPoem from './components/AddPoem';
 import Poems from './components/Poems';
@@ -26,8 +26,8 @@ function App() {
       <NavBar/>
       <Switch>
         <Route exact path="/"><Home/></Route>
-        <Route exact path="/categories"><Categories/></Route>
-        <Route exact path="/authors"><Authors/></Route>
+        <Route exact path="/popular"><Popular/></Route>
+        <Route exact path="/authors"><Authors poemItems={poems}/></Route>
         <Route exact path="/addpoem"><AddPoem/></Route>
         <Route exact path="/contactus"><Poems poemItems ={poems}/></Route>
       </Switch>
