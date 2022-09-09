@@ -1,9 +1,9 @@
 import React from "react";
 
-function AuthorCard(){
+function AuthorCard({author}){
     return(
         <div>
-            <h4>This is me the author</h4>
+            <h4>{author.name}</h4>
         </div>
     )
 }
