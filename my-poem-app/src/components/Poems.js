@@ -1,10 +1,10 @@
 import React from "react";
-import AuthorCard from "./AuthorCard";
+import AddPoem from "./AddPoem";
 function Poems({poems}){
     return (
         <div className="container-1">
         <div className="box-1">
-          <AuthorCard/>
+          <AddPoem/>
         </div>
         <div className="box-2">
           {poems.map((poem)=>{
