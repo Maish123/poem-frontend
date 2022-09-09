@@ -13,7 +13,7 @@ function NavBar(){
                          <Link to="/" className="nav-link">HOME</Link>
                      </li>
                      <li>
-                         <Link to="/contactUs" className="nav-link">POEMS</Link>
+                         <Link to="/poems" className="nav-link">POEMS</Link>
                      </li>
                      <li>
                          <Link to="/popular" className="nav-link">POPULAR</Link>
@@ -22,7 +22,7 @@ function NavBar(){
                          <Link to="/authors" className="nav-link">AUTHORS</Link>
                      </li>
                      <li>
-                         <Link to="/addpoem" className="nav-link">ADD-POEM</Link>
+                         <Link to="/contactUs" className="nav-link">CONTACTS</Link>
                      </li>
 
                  </ul>

@@ -1,8 +1,9 @@
-function AuthorCard({author}){
-    const{name,age,poems}=author
+import React from "react";
+
+function AuthorCard(){
     return(
         <div>
-            <h4>{name}</h4>
+            <h4>This is me the author</h4>
         </div>
     )
 }
