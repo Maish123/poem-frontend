@@ -12,9 +12,7 @@ function Poems({poems}){
               <div>
                 <h4>{poem.title}</h4>
                 <p>{poem.content}</p>
-                <div>
-
-                </div>
+                <div></div>
               </div>
             )
           })}
