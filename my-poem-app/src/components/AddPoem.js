@@ -3,7 +3,17 @@ import React from "react";
 function AddPoem(){
     return(
         <div>
-            <h1>Add Poem here</h1>
+            <form>
+                <label>POEM NAME</label>
+                <input
+                type="text"
+                placeholder="input poem title"/>
+                <label>POEM CONTENT</label>
+                <input
+                type="text"
+                placeholder="input poem content"/>
+                <input id="submit" type="submit" value="SHARE YOUR THOUGHTS"/>
+            </form>
         </div>
     )
 }
