@@ -1,10 +1,8 @@
-function AuthorCard({poems}){
-    const{author,content,imageUrl,title, id}=poems
+function AuthorCard({author}){
+    const{name,age,poems}=author
     return(
         <div>
-            <h4>{title}</h4>
-            <h6>By - {author}</h6>
-            <p>{content}</p>
+            <h4>{name}</h4>
         </div>
     )
 }

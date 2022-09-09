@@ -13,7 +13,7 @@ function App() {
   const[poems, setPoems] = useState([]) //state for the poem data
 
   useEffect(()=>{
-    fetch("http://localhost:3000/information")
+    fetch("http://localhost:9292/poems")
     .then((resp)=>resp.json())
     .then((respObj)=>{
       console.log(respObj)

@@ -1,5 +1,5 @@
 function PoemDetail({poems}){
-    const{author,content,imageUrl,title, id} = poems
+    const{author,content,title, id} = poems
     return(
         <div>
             <h4>{title}</h4>

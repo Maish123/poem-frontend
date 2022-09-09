@@ -2,12 +2,12 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 function AuthorContainer({poems}){
-    const{author,content,imageUrl,title, id}=poems
+    const{id, title, content, likes}=poems
     const poemId = poems.id
 
     return(
         <div>
-            <h6>BY - {poems.author}</h6>
+            <h6>{poems.title}</h6>
             <Link to={'/PoemDetail'+{poemId}}>More Info</Link>
         </div>
     )
