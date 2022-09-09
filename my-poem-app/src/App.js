@@ -27,9 +27,9 @@ function App() {
       <Switch>
         <Route exact path="/"><Home/></Route>
         <Route exact path="/popular"><Popular/></Route>
-        <Route exact path="/authors"><Authors poemItems={poems}/></Route>
+        <Route exact path="/authors"><Authors/></Route>
         <Route exact path="/addpoem"><AddPoem/></Route>
-        <Route exact path="/contactus"><Poems poemItems ={poems}/></Route>
+        <Route exact path="/contactus"><Poems poems ={poems}/></Route>
       </Switch>
     </div>
   )
