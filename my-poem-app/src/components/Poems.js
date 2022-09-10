@@ -1,18 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import AddPoem from "./AddPoem";
+import PoemCard from "./PoemCard";
 function Poems({poems,onAddPoem, onDeletePoem}){
   
-    //function for handling the number of likes
-
-    //function for handling delete operation
-    function handlePoemDelete(){
-      console.log("i have been clicked")
-      fetch(`http://localhost:9292/poems/${poems.id}`,{
-        method: "DELETE",
-      })
-      .then((resp)=>resp.json())
-      .then((deletedPoem)=>onDeletePoem(deletedPoem))
-    }
     return (
         <div className="container-1">
         <div className="box-1">
@@ -21,14 +11,10 @@ function Poems({poems,onAddPoem, onDeletePoem}){
         <div className="box-2">
           {poems.map((poem)=>{
             return(
-              <div key={poem.id} className="poem-container">
-                <h4>{poem.title}</h4>
-                <p>{poem.content}</p>
-                <div>
-                  <button onClick={handlePoemDelete}>DELETE</button>
-                  <button>LIKES - {poem.likes}</button>
-                </div>
-              </div>
+              <PoemCard
+              key={poem.id}
+              poem={poem}
+              onDeletePoem={onDeletePoem}/>
             )
           })}
         </div>
