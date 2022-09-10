@@ -22,6 +22,12 @@ function App() {
     })
   },[])
 
+  //Make a post request to the server(for new poem)
+
+function addPoemToList(newPoem){
+  setPoems([...poems,newPoem])
+}
+
   return(
     <div>
       <NavBar/>
@@ -30,7 +36,7 @@ function App() {
         <Route exact path="/popular"><Popular/></Route>
         <Route exact path="/authors"><Authors/></Route>
         <Route exact path="/contactUs"><ContactUs/></Route>
-        <Route exact path="/poems"><Poems poems ={poems}/></Route>
+        <Route exact path="/poems"><Poems poems ={poems} onAddPoem={addPoemToList}/></Route>
       </Switch>
     </div>
   )

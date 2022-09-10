@@ -1,18 +1,21 @@
 import React from "react";
 import AddPoem from "./AddPoem";
-function Poems({poems}){
+function Poems({poems,onAddPoem}){
     return (
         <div className="container-1">
         <div className="box-1">
-          <AddPoem/>
+          <AddPoem onAddPoem={onAddPoem}/>
         </div>
         <div className="box-2">
           {poems.map((poem)=>{
             return(
-              <div>
+              <div key={poem.id}>
                 <h4>{poem.title}</h4>
                 <p>{poem.content}</p>
-                <div></div>
+                <div>
+                  <button>DELETE</button>
+                  <button>LIKES - {poem.likes}</button>
+                </div>
               </div>
             )
           })}
