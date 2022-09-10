@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import AddPoem from "./AddPoem";
 function Poems({poems,onAddPoem}){
+
+    //function for handling the number of likes
+    const[likes, setLikes]=useState("0");
+
+    // function handleSubmit(e){
+    //   e.preventDefault();
+    //   fetch("")
+    // }
     return (
         <div className="container-1">
         <div className="box-1">
@@ -9,7 +17,7 @@ function Poems({poems,onAddPoem}){
         <div className="box-2">
           {poems.map((poem)=>{
             return(
-              <div key={poem.id}>
+              <div key={poem.id} className="poem-container">
                 <h4>{poem.title}</h4>
                 <p>{poem.content}</p>
                 <div>
