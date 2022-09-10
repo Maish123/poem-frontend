@@ -3,7 +3,7 @@ import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Popular from './components/Popular';
 import Authors from './components/Authors';
-import AddPoem from './components/ContactUs';
+import AddPoem from './components/AddPoem';
 import Poems from './components/Poems';
 import { Route, Switch } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -28,6 +28,12 @@ function addPoemToList(newPoem){
   setPoems([...poems,newPoem])
 }
 
+//make a delete request
+function deletePoemFromList(deletedPoem){
+  const updatedDeletedItem = poems.filter((poem)=>poem.id !== deletedPoem.id)
+  setPoems(updatedDeletedItem)
+}
+
   return(
     <div>
       <NavBar/>
@@ -36,7 +42,7 @@ function addPoemToList(newPoem){
         <Route exact path="/popular"><Popular/></Route>
         <Route exact path="/authors"><Authors/></Route>
         <Route exact path="/contactUs"><ContactUs/></Route>
-        <Route exact path="/poems"><Poems poems ={poems} onAddPoem={addPoemToList}/></Route>
+        <Route exact path="/poems"><Poems poems ={poems} onAddPoem={addPoemToList} onDeletePoem={deletePoemFromList}/></Route>
       </Switch>
     </div>
   )

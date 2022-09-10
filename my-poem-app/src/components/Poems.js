@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import AddPoem from "./AddPoem";
-function Poems({poems,onAddPoem}){
-
+function Poems({poems,onAddPoem, onDeletePoem}){
+  
     //function for handling the number of likes
-    const[likes, setLikes]=useState("0");
 
-    // function handleSubmit(e){
-    //   e.preventDefault();
-    //   fetch("")
-    // }
+    //function for handling delete operation
+    function handlePoemDelete(){
+      console.log("i have been clicked")
+      fetch(`http://localhost:9292/poems/${poems.id}`,{
+        method: "DELETE",
+      })
+      .then((resp)=>resp.json())
+      .then((deletedPoem)=>onDeletePoem(deletedPoem))
+    }
     return (
         <div className="container-1">
         <div className="box-1">
@@ -21,7 +25,7 @@ function Poems({poems,onAddPoem}){
                 <h4>{poem.title}</h4>
                 <p>{poem.content}</p>
                 <div>
-                  <button>DELETE</button>
+                  <button onClick={handlePoemDelete}>DELETE</button>
                   <button>LIKES - {poem.likes}</button>
                 </div>
               </div>
