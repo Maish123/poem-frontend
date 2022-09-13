@@ -70,7 +70,7 @@ function AddPoem({onAddPoem}){
                 onChange={(e)=>setContent(e.target.value)}/>
                 <label>Content</label>
                 </div>
-                <input id="submit" type="submit" value="SHARE YOUR THOUGHTS"/>
+                <input className="btn" type="submit" value="SHARE YOUR THOUGHTS"/>
             </form>
         </div>
     )

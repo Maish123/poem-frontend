@@ -78,7 +78,7 @@
   color: black;
   margin: 1rem;
   border-radius: .5rem;
-  border: 0.5px black solid;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .brand-title{
@@ -104,7 +104,8 @@
 }
 
 .navbar-links li:hover{
-  background-color: #555;
+  /* background-color: rgb(229, 205, 205); */
+  border-bottom: 2px solid rgb(229, 205, 205);
 }
 
 .toggle-button{
@@ -204,11 +205,26 @@
 }
 
 .pop-container div{
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding: 10px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* button styling */
+
+.btn{
+  margin:5px;
+  background: none;
+  border: 0.3px solid black;
+  border-radius: 5px;
+}
+
+.btn :hover{
+  cursor: pointer;
+}
+
+
 
 
 

@@ -6,7 +6,7 @@ function NavBar(){
     return(
         <div>
           <nav className="navbar">
-            <div className="brand-title">Brand Name</div>
+            <div className="brand-title">SPIT-A-RHYME</div>
             <div className="navbar-links">
                  <ul>
                      <li>

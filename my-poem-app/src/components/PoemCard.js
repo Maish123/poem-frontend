@@ -15,8 +15,8 @@ function PoemCard({poem,onDeletePoem}){
             <h4>{poem.title}</h4>
             <p>{poem.content}</p>
             <div>
-                <button onClick={handlePoemDelete}>DELETE</button>
-                <button>LIKES - {poem.likes}</button>
+                <button className="btn" onClick={handlePoemDelete}>DELETE</button>
+                <button className="btn">LIKES - {poem.likes}</button>
             </div>
          </div>
     )
