@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PopularCard from "./PopularCard";
 
 function Popular(){
     const[favPoems, setFavPoems]= useState([])
@@ -11,8 +12,14 @@ function Popular(){
         })
     },[]);
     return (
-        <div>
-            <h1>This list shows the top 10 poems with most likes</h1>
+        <div className="pop-container">
+            {favPoems.map((favPoem)=>{
+                return(
+                    <PopularCard
+                    key={favPoem.id}
+                    favPoem = {favPoem}/>
+                )
+            })}
         </div>
     )
 }

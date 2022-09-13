@@ -197,5 +197,18 @@
   color: #4158d0;
 }
 
+/* for the popular component */
+
+.pop-container{
+  margin: 20px 20px;
+}
+
+.pop-container div{
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
 
 
